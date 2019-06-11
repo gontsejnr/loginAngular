@@ -1,12 +1,11 @@
 {{welcome}}
 <br>
 <br>
-<form action="/action_page.php">
+
   Username:<br>
-  <input type="text"  name="username">
+  <input type="username" [(ngModel)]="username">
   <br>
   Password:<br>
-  <input type="password" name="password" >
+  <input type="password"  [(ngModel)]="password">
   <br><br>
   <button (click)="onLogin()">Login</button>
-</form> 

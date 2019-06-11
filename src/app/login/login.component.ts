@@ -7,6 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  username: string ='';
+  password: string ='';
+  
   
   welcome="welcome to my app!"
 
@@ -15,7 +18,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
   onLogin(){
-    this.router.navigateByUrl("menu")
+    this.router.navigate(['/detail'], {queryParams: {username: this.username, password: this.password}})
   }
 
 }
